@@ -1,5 +1,6 @@
 package Decorator;
 
 public abstract class AMatrioshka {
-    String name; // имя матрёшки
+
+  String name; // имя матрёшки
 }

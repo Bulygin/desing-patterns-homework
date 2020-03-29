@@ -14,7 +14,7 @@ public class ChainResponsibilityTest {
   Random rnd = new Random();
 
   @Test
-  public void test() {
+  public void ChainOfResponsibility_CreateTenRequestAndThreeHandlers_NotError() {
     List<Request> requests = new ArrayList<>();
     for (int i = 0; i < 10; i++) {
       Request request = new Request();
