@@ -2,6 +2,7 @@ package Builder;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class MessageBuilderTest {
@@ -16,7 +17,11 @@ public class MessageBuilderTest {
       }
     };
     List<IRecipient> recipients = new ArrayList<>();
+
     AEmailMessage message = messageBuilder.buildSubject("subject").buildSender(recipient)
         .buildRecipients(recipients).buildBody("body").build();
+    AEmailMessage messageTwo = messageBuilder.build();
+
+    Assert.assertEquals(message, messageTwo);
   }
 }

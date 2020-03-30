@@ -1,6 +1,7 @@
 package Builder;
 
 import java.util.List;
+import java.util.Objects;
 
 public class EmailMessage extends AEmailMessage {
 
@@ -14,6 +15,24 @@ public class EmailMessage extends AEmailMessage {
     this.sender = emailMessageBuilder.sender;
     this.body = emailMessageBuilder.body;
     this.subject = emailMessageBuilder.subject;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (!(o instanceof EmailMessage)) {
+      return false;
+    }
+    EmailMessage that = (EmailMessage) o;
+    return Objects.equals(recipients, that.recipients) && Objects.equals(sender, that.sender)
+        && Objects.equals(body, that.body) && Objects.equals(subject, that.subject);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(recipients, sender, body, subject);
   }
 
   @Override
