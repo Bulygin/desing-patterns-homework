@@ -7,7 +7,7 @@ import java.math.BigInteger;
 
 public class PrimeNumberHandler extends ABaseHandler {
 
-  IHandler next;
+  private IHandler next;
 
   @Override
   public void setNextHandler(IHandler handler) {
@@ -27,10 +27,7 @@ public class PrimeNumberHandler extends ABaseHandler {
 
   @Override
   public boolean validate(Request request) {
-    if (request.value > 10) {
-      return true;
-    }
-    return false;
+    return request.value > 10;
   }
 
 }

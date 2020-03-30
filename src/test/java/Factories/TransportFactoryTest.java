@@ -1,5 +1,10 @@
-package Factory.Factories;
+package Factories;
 
+import Factory.Factories.CarFactory;
+import Factory.Factories.HelicopterFactory;
+import Factory.Factories.ITransportFactory;
+import Factory.Factories.ShipFactory;
+import Factory.Factories.TrainFactory;
 import Factory.ITransport;
 import Factory.Transport.Car;
 import Factory.Transport.Helicopter;
